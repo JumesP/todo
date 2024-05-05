@@ -6,10 +6,10 @@ export default function Todo({ dataTitle, data }) {
     const todos: any[] = []
 
     for (let i:number  = 0; i < Object.keys(data).length; i++) {
-        let checkbox = dataTitle + "checkbox_" + i
+        let checkbox = dataTitle + "_checkbox_" + i
 
         todos.push(
-            <SingleTodo checkboxid={checkbox} data={data[i]["content"]} checked={data[i]["checked"]} />
+            <SingleTodo checkboxid={checkbox} data={data[i]["content"]} checked={data[i]["checked"]} dataTitle={dataTitle} dataID={i} />
         )
     }
 
@@ -17,7 +17,7 @@ export default function Todo({ dataTitle, data }) {
         <AddItemButton />
     )
 
-    console.log(todos)
+    // console.log(todos)
 
     return(
         <div className="bg-gray-200 rounded-2xl shadow-2xl">

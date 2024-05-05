@@ -1,18 +1,48 @@
 const mongoose = require('mongoose');
 
+// const postSchema = new mongoose.Schema({
+//     todoList: {
+//         type: Array,
+//         required: true
+//     }
+// });
+
+// const postSchema = new mongoose.Schema({
+//     DataTitle:
+//         [{
+//             content: {
+//                 type: String,
+//                 required: true
+//             },
+//             checked: {
+//                 type: Boolean,
+//                 required: true
+//             }
+//         }]
+// });
+
 const postSchema = new mongoose.Schema({
-    todoList: {
-        type: Array,
+        dataTitle: {
+            type: String,
+            required: true
+        },
+        tasks: {
+            type: Array,
+            required: true
+        }
+})
+
+const singleTaskSchema = new mongoose.Schema({
+    content: {
+        type: String,
+        required: true
+    },
+    checked: {
+        type: Boolean,
         required: true
     }
-});
+})
 
 
-
-// const PostModel = models.post ?? model("james", postSchema);
-
-// const PostModel = models.user || model('james', postSchema);
+module.exports = mongoose.models.james || mongoose.model("james", singleTaskSchema);
 module.exports = mongoose.models.james || mongoose.model("james", postSchema);
-
-// export default model("james", postSchema);
-// export default PostModel;

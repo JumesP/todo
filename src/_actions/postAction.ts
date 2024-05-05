@@ -11,9 +11,9 @@ export async function getPosts(){
 
         // throw new Error("This is an error")
 
-        // console.log("Database data: vvv")
-        // console.log(data);
-        // console.log("Database data: ^^^")
+        console.log("Database data: vvv")
+        console.log(data);
+        console.log("Database data: ^^^")
 
         return { data }
     } catch (err) {
