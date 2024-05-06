@@ -2,18 +2,16 @@
 
 import PostModel from "../models/postModels";
 import connectDB from "../config/database";
+import mongoose from "mongoose";
 
-export async function getPosts(){
+export async function deletePost(){
     try {
         await connectDB();
         const data = JSON.parse(JSON.stringify(await PostModel.find()));
-        // const data = await PostModel.find();
 
-        // throw new Error("This is an error")
+        const test = mongoose.model('james', postSchema);
+        await test.create({dataTitle: "test", tasks: [{content: "test", checked: false}]}).then((data) => console.log(data));
 
-        // console.log("Database data: vvv")
-        // console.log(data);
-        // console.log("Database data: ^^^")
 
         return { data }
     } catch (err) {

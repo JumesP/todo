@@ -8,11 +8,11 @@ export async function postChecks(dataTitle: string, dataID: string, checked: boo
         await connectDB();
         const data = JSON.parse(JSON.stringify(await PostModel.find()));
 
-        console.log("Database data: vvv")
-        // console.log(data);
-        console.log("Database data[0]: vvv")
-        console.log(data[0]);
-        console.log("Database data: ^^^")
+        // console.log("Database data: vvv")
+        // // console.log(data);
+        // console.log("Database data[0]: vvv")
+        // console.log(data[0]);
+        // console.log("Database data: ^^^")
 
         if (checked) {
             console.log("Hi")

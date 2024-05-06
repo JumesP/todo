@@ -13,23 +13,63 @@ export async function postNewTodo(){
     // const datacontent = content;
     // const datachecked = checked;
 
-    const datacontent:string = "take fimble to town";
-    const datachecked:boolean = true;
+    // const datacontent:string = "take fimble to town";
+    // const datachecked:boolean = true;
 
 
-    const newTodo = new singleTaskSchema({
-        content: datacontent,
-        checked: datachecked
-    });
+    // const newTodo = new singleTaskSchema({
+    //     content: datacontent,
+    //     checked: datachecked
+    // });
 
     // singleTaskSchema.findOneAndUpdate(
     //     { _id: "6633f70af9aabcbb255cc809"},
-    //     { $push: { "Phase 7": newTodo } }
+    //     { $push: { "Phase 6": newTodo } }
     // )
+
+
+
+
+    // create new todopage title
+    PostModel.create({dataTitle: "Fimbles"})
+
+
+    const data = JSON.parse(JSON.stringify(await PostModel.find({dataTitle: "Fimbles"})));
+    console.log(data)
+
+    // const fimbleID = "ObjectId(6638cb25aaaf4c2c0e5922a6)"
+    const id = "6638d5668b7eb23675bcbb54"
+
+    singleTaskSchema.findOneAndUpdate(
+        { dateTitle: "Fimbles2"},
+        { $set: { "tasks": [{content: "take fimble to town", checked: true}] }}
+    )
+
+    // PostModel.update(
+    //     {dataTitle: "Fimbles2"},
+    //     { $set : {
+    //         "items.$.name" : "updatedItemName",
+    //         "items.$.value" : "updatedItemValue"
+    //         }}, function(err) {
+    //         if (err) throw err;
+    //     })
+    // const itemID = 2
+    // const query = {dataTitle: "Fimbles"}
     //
+    // PostModel.findOne(query).then(doc => {
+    //     item = doc.tasks.id(itemID);
+    //     item["name"] = "updatedItemName";
+    //     item["value"] = "updatedItemValue";
+    //     doc.save();
+    // })
+
+
+
+
+    // PostModel.insertMany({dataTitle: "Fimbles"}, {tasks: [{content: "take fimble to town", checked: true}]})
     // singleTaskSchema.update(
     //     { _id: "6633f70af9aabcbb255cc809"},
-    //     { $push: { "Phase 7": newTodo } }
+    //     { $push: { "Phase 6": newTodo } }
     // )
 
 

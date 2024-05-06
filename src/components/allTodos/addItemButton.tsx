@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import Checkbox from "@/components/allTodos/checkbox";
 import NewTodoEntry from "@/components/allTodos/newTodoEntry";
+import {postNewTodo} from "@/_actions/postNewTodo";
 // import {postNewTodo} from "@/_actions/postNewTodo";
 
 export default function AddItemButton() {
@@ -10,11 +11,13 @@ export default function AddItemButton() {
     const [newTodo, setNewTodo] = useState()
 
     const addTodo = () => {
-        if (newTodo === undefined) {
-            setNewTodo(["Hi there!"])
-        } else {
-            setNewTodo(oldArray => [...oldArray, <NewTodoEntry />])
-        }
+        postNewTodo()
+
+        // if (newTodo === undefined) {
+        //     setNewTodo([<NewTodoEntry />])
+        // } else {
+        //     setNewTodo(oldArray => [...oldArray, <NewTodoEntry />])
+        // }
         // setNewTodo(oldArray => [...oldArray, <NewTodoEntry />])
         // setNewTodo("Spongebob")
     }
@@ -38,8 +41,7 @@ export default function AddItemButton() {
                 {/*{newTodo.map(entry => {*/}
                 {/*    <div>{entry}</div>*/}
                 {/*})}*/}
-                {newerTodo}
-                <p className="text-gray-800">name: {newTodo}</p>
+                <p className="text-gray-800">{newTodo}</p>
 
             </div>
             <div className="text-gray-800 pt-1 pb-2 px-5 active:bg-gray-300 rounded-b-2xl">

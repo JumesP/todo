@@ -28,7 +28,7 @@ const postSchema = new mongoose.Schema({
         },
         tasks: {
             type: Array,
-            required: true
+            required: false
         }
 })
 
@@ -44,5 +44,5 @@ const singleTaskSchema = new mongoose.Schema({
 })
 
 
-module.exports = mongoose.models.james || mongoose.model("james", singleTaskSchema);
+// module.exports = mongoose.models.james || mongoose.model("james", singleTaskSames", singleTaskSchema);
 module.exports = mongoose.models.james || mongoose.model("james", postSchema);
