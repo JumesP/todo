@@ -1,6 +1,6 @@
 'use server'
 
-import PostModel from "../models/postModels";
+// import PostModel from "../models/postModels";
 import connectDB from "../config/database";
 import mongoose from "mongoose";
 

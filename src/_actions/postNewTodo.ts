@@ -1,7 +1,7 @@
 'use server'
 
-import PostModel from "../models/postModels";
-import singleTaskSchema from "../models/postModels";
+// import PostModels from "@/models/postModels";
+import singleTaskSchema from "@/models/todoModel";
 import connectDB from "../config/database";
 import mongoose from 'mongoose';
 
@@ -31,11 +31,11 @@ export async function postNewTodo(){
 
 
     // create new todopage title
-    PostModel.create({dataTitle: "Fimbles"})
-
-
-    const data = JSON.parse(JSON.stringify(await PostModel.find({dataTitle: "Fimbles"})));
-    console.log(data)
+    // PostModel.create({dataTitle: "Fimbles"})
+    //
+    //
+    // const data = JSON.parse(JSON.stringify(await PostModel.find({dataTitle: "Fimbles"})));
+    // console.log(data)
 
     // const fimbleID = "ObjectId(6638cb25aaaf4c2c0e5922a6)"
     const id = "6638d5668b7eb23675bcbb54"

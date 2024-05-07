@@ -8,8 +8,11 @@ async function AllTodos() {
 
     const allTodos: any[] = []
 
-    for (let i: number = 1; i < (Object.keys(data[0]).length); i++) {
-        allTodos.push(<Todo dataTitle={Object.keys(data[0])[i]} data={data[0][Object.keys(data[0])[i]]}/>)
+    // console.log(data[0])
+
+    for (let i: number = 0; i < (Object.keys(data).length); i++) {
+        allTodos.push(<Todo dataTitle={Object.keys(data)[i]} data={data[i]["tasks"]}/>)
+
     }
 
     allTodos.push(<NewTodoPage />)

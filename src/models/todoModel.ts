@@ -11,4 +11,4 @@ const singleTaskSchema = new mongoose.Schema({
     }
 })
 
-module.exports = mongoose.models.james || mongoose.model("james", singleTaskSames);
+module.exports = mongoose.models.james || mongoose.model("james", singleTaskSchema);

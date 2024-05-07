@@ -28,21 +28,22 @@ const postSchema = new mongoose.Schema({
         },
         tasks: {
             type: Array,
-            required: false
+            required: true
         }
 })
 
-const singleTaskSchema = new mongoose.Schema({
-    content: {
-        type: String,
-        required: true
-    },
-    checked: {
-        type: Boolean,
-        required: true
-    }
-})
-
+// const singleTaskSchema = new mongoose.Schema({
+//     content: {
+//         type: String,
+//         required: true
+//     },
+//     checked: {
+//         type: Boolean,
+//         required: true
+//     }
+// })
+//
 
 // module.exports = mongoose.models.james || mongoose.model("james", singleTaskSames", singleTaskSchema);
 module.exports = mongoose.models.james || mongoose.model("james", postSchema);
+// module.exports = mongoose.models.james || mongoose.model("james", singleTaskSchema);

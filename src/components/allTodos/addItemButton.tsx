@@ -11,20 +11,18 @@ export default function AddItemButton() {
     const [newTodo, setNewTodo] = useState()
 
     const addTodo = () => {
-        postNewTodo()
-
-        // if (newTodo === undefined) {
-        //     setNewTodo([<NewTodoEntry />])
-        // } else {
-        //     setNewTodo(oldArray => [...oldArray, <NewTodoEntry />])
-        // }
-        // setNewTodo(oldArray => [...oldArray, <NewTodoEntry />])
-        // setNewTodo("Spongebob")
+        if (newTodo === undefined) {
+            setNewTodo([<NewTodoEntry />])
+        } else {
+            setNewTodo(oldArray => [...oldArray, <NewTodoEntry />])
+        }
+        setNewTodo(oldArray => [...oldArray, <NewTodoEntry />])
+        setNewTodo("Spongebob")
     }
 
     // setNewTodo(["Hi there!"])
 
-    console.log(newTodo)
+    // console.log(newTodo)
 
     const newerTodo: any[] = []
 
