@@ -16,8 +16,7 @@ export default function AddItemButton() {
         } else {
             setNewTodo(oldArray => [...oldArray, <NewTodoEntry />])
         }
-        setNewTodo(oldArray => [...oldArray, <NewTodoEntry />])
-        setNewTodo("Spongebob")
+        // setNewTodo(oldArray => [...oldArray, <NewTodoEntry />])
     }
 
     // setNewTodo(["Hi there!"])
@@ -39,8 +38,8 @@ export default function AddItemButton() {
                 {/*{newTodo.map(entry => {*/}
                 {/*    <div>{entry}</div>*/}
                 {/*})}*/}
-                <p className="text-gray-800">{newTodo}</p>
-
+                {/*<p className="text-gray-800">{newTodo}</p>*/}
+                {newTodo}
             </div>
             <div className="text-gray-800 pt-1 pb-2 px-5 active:bg-gray-300 rounded-b-2xl">
                 <button className="text-m font-semibold px-1 align-middle border-0 text-gray-800 hover:text-gray-400" onClick={addTodo}>+ Add Item</button>

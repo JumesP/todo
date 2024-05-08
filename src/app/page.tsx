@@ -1,7 +1,7 @@
-
+'use server'
 
 import AllTodo from "../pages/allTodos";
-import {postNewTodo} from "@/_actions/postNewTodo";
+import { PostNewTodo } from "@/_actions/postNewTodo";
 
 // function submitForm() {
 //     var dataTitle = document.getElementById("dataTitle");
@@ -11,8 +11,8 @@ import {postNewTodo} from "@/_actions/postNewTodo";
 //     postNewTodo(dataTitle.valueOf(), dataID.valueOf(), content.valueOf(), checked.valueOf());
 // }
 
+
 export default async function Home(){
-    postNewTodo();
     return (
         <main className="flex min-h-screen flex-col items-center bg-gray-400">
             <h1 className="text-gray-800 text-3xl p-5">To-do List</h1>
@@ -28,6 +28,8 @@ export default async function Home(){
             {/*<input type="text" id="content" placeholder="content"/>*/}
             {/*<input type="text" id="checked" placeholder="checked: bool"/>*/}
             {/*<button onSubmit={submitForm}></button>*/}
+
+            <button onClick={PostNewTodo}>click me for hell problems</button>
         </main>
     );
 }
