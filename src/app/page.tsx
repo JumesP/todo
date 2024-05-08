@@ -1,7 +1,7 @@
 'use server'
 
 import AllTodo from "../pages/allTodos";
-import { PostNewTodo } from "@/_actions/postNewTodo";
+import Button from "@/components/allTodos/button";
 
 // function submitForm() {
 //     var dataTitle = document.getElementById("dataTitle");
@@ -10,6 +10,8 @@ import { PostNewTodo } from "@/_actions/postNewTodo";
 //     var checked = document.getElementById("checked");
 //     postNewTodo(dataTitle.valueOf(), dataID.valueOf(), content.valueOf(), checked.valueOf());
 // }
+
+
 
 
 export default async function Home(){
@@ -29,7 +31,7 @@ export default async function Home(){
             {/*<input type="text" id="checked" placeholder="checked: bool"/>*/}
             {/*<button onSubmit={submitForm}></button>*/}
 
-            <button onClick={PostNewTodo}>click me for hell problems</button>
+            <Button />
         </main>
     );
 }

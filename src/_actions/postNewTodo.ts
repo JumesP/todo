@@ -2,26 +2,31 @@
 
 import PostModel from "@/models/postModels";
 
-export async function PostNewTodo(){
+export async function PostNewTodo() {
+    console.log("HI")
 
-    var cleanData = JSON.parse(JSON.stringify(await PostModel.findOne({dataTitle: "Phase_2"})))
+    var cleanData = JSON.parse(JSON.stringify(await PostModel.findOne({dataTitle: "Phase"})))
     console.log(cleanData)
 
-    const tasks = [{content: "take fimble to town", checked: true}];
+    cleanData = JSON.parse(JSON.stringify(await PostModel.findById("6639739fd95bc78ff49d81d4")))
+    console.log(cleanData)
 
-    PostModel.findOneAndUpdate(
-        {dataTitle: "Phase_2"},
-        {"push": {tasks: tasks}},
-        function (error, success) {
-            if (error) {
-                console.log(error);
-            } else {
-                console.log(success);
-            }
-        }
+    // await PostModel.findByIdAndUpdate(
+    //     "6639739fd95bc78ff49d81d4",
+    //     {$push: {tasks: []}}
+    // )
+
+    const tasks = {content: "take fimble to town", checked: true};
+
+    await PostModel.findOneAndUpdate(
+        {dataTitle: "Phase"},
+        {$push: {tasks: tasks}}
     )
 
-    cleanData = JSON.parse(JSON.stringify(await PostModel.findOne({dataTitle: "Phase_2"})))
+    cleanData = JSON.parse(JSON.stringify(await PostModel.findOne({dataTitle: "Phase"})))
+    console.log(cleanData)
+
+    cleanData = JSON.parse(JSON.stringify(await PostModel.findById("6639739fd95bc78ff49d81d4")))
     console.log(cleanData)
 }
 
