@@ -1,6 +1,19 @@
 import Checkbox from "./checkbox";
 // import bin from "../../../public/delete.png"
 import "../../../public/css/styles.css"
+import {deletePost} from "@/_actions/postDelete";
+
+function deleteTodo(dataTitle, content) {
+    // console.log(dataTitle)
+    // console.log(content)
+
+    // dataTitle = "James"
+
+    deletePost(dataTitle, content)
+
+
+}
+
 
 
 export default function SingleTodo({ checkboxid, data, checked, dataTitle, dataID }) {
@@ -12,7 +25,7 @@ export default function SingleTodo({ checkboxid, data, checked, dataTitle, dataI
                     {data}
                 </label>
             </div>
-            <button className="w-6 h-6 ml-3 bg-red-700 border-2 rounded-md border-black flex  align-middle justify-center Logo"></button>
+            <button className="w-6 h-6 ml-3 bg-red-700 border-2 rounded-md border-black flex  align-middle justify-center Logo" onClick={(e) => {deleteTodo(dataTitle, data)}}></button>
         </div>
     )
 }

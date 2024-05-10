@@ -1,7 +1,8 @@
+'use client'
+
 import Checkbox from "@/components/allTodos/checkbox";
 import React from "react";
 import {PostNewTodo} from "@/_actions/postNewTodo";
-import data from "@mongodb-js/saslprep/dist/code-points-data-browser";
 
 export default function NewTodoEntry(dataTitle) {
     return(
@@ -19,12 +20,12 @@ async function submitNewTodo(dataTitle: string) {
     console.log("Helo world")
     const content = document.getElementById("todoContent").value
 
-    // console.log(dataTitle["dataTitle"])
-    var dataTitle = "James"
+    console.log(dataTitle)
+    // var dataTitle = "James"
     // var content = "Hello all"
 
-    // dataTitle= dataTitle["dataTitle"]
-
+    dataTitle= dataTitle["dataTitle"]
+    dataTitle= dataTitle["dataTitle"]
 
     await PostNewTodo(dataTitle, content, false)
 }
