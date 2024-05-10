@@ -6,15 +6,15 @@ import NewTodoEntry from "@/components/allTodos/newTodoEntry";
 import {postNewTodo} from "@/_actions/postNewTodo";
 // import {postNewTodo} from "@/_actions/postNewTodo";
 
-export default function AddItemButton() {
+export default function AddItemButton(dataTitle) {
 
     const [newTodo, setNewTodo] = useState()
 
     const addTodo = () => {
         if (newTodo === undefined) {
-            setNewTodo([<NewTodoEntry />])
+            setNewTodo([<NewTodoEntry dataTitle={dataTitle}/>])
         } else {
-            setNewTodo(oldArray => [...oldArray, <NewTodoEntry />])
+            setNewTodo(oldArray => [...oldArray, <NewTodoEntry dataTitle={dataTitle}/>])
         }
         // setNewTodo(oldArray => [...oldArray, <NewTodoEntry />])
     }

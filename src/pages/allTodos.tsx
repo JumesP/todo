@@ -7,7 +7,7 @@ async function AllTodos() {
     const { data } = await getPosts();
 
     // console.log({data})
-    console.log(data)
+    // console.log(data)
     // console.log("v")
     // console.log(Object.keys(data)[0])
     // console.log("^")

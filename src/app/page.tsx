@@ -1,7 +1,7 @@
 'use server'
 
 import AllTodo from "../pages/allTodos";
-import Button from "@/components/allTodos/button";
+import AddNewTodo from "@/components/allTodos/addNewTodo";
 
 // function submitForm() {
 //     var dataTitle = document.getElementById("dataTitle");
@@ -31,7 +31,7 @@ export default async function Home(){
             {/*<input type="text" id="checked" placeholder="checked: bool"/>*/}
             {/*<button onSubmit={submitForm}></button>*/}
 
-            <Button />
+            <AddNewTodo />
         </main>
     );
 }

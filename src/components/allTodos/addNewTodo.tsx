@@ -6,7 +6,7 @@ async function help() {
     await PostNewTodo();
 }
 
-export default function Button() {
+export default function AddNewTodo() {
     return(
         <button onClick={function(e) { help() }}>click me for WORST EVER hellish problems, for 0 reason</button>
     )
