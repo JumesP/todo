@@ -40,7 +40,7 @@ export default function RenameTodoTitle( dataTitle:string ) {
 
 
     return(
-        <div key="div">
+        <div key="div" className="w-4/5">
             <button className="" onClick={e => addTodo(dataTitle)} key="5">{dataTitle}</button>
             {showForm}
         </div>

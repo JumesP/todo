@@ -27,7 +27,7 @@ export default function Todo({ dataTitle, data }) {
 
     return(
         <div className="bg-gray-200 rounded-2xl shadow-2xl">
-            <div id="title" className="bg-blue-600 p-5 rounded-t-2xl text-2xl text-center">
+            <div id="title" className="bg-blue-600 p-5 rounded-t-2xl text-2xl text-center flex flex-nowrap">
                 <RenameTodoTitle dataTitle={dataTitle}/>
                 {/*<button className="w-4 h-4 pl-3" onClick={e => PostNewTitle()}>💭</button>*/}
                 <DeletePage dataTitle={dataTitle}/>

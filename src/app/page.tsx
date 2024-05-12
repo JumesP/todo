@@ -20,18 +20,7 @@ export default async function Home(){
             <h1 className="text-gray-800 text-3xl p-5">To-do List</h1>
             <div className="flex flex-row flex-wrap flex-start gap-8 w-screen justify-center">
                 <AllTodo />
-
             </div>
-
-
-            {/*<form ></form>*/}
-            {/*<input type="text" id="dataTitle" placeholder="dataTitle"/>*/}
-            {/*<input type="text" id="dataID" placeholder="dataID"/>*/}
-            {/*<input type="text" id="content" placeholder="content"/>*/}
-            {/*<input type="text" id="checked" placeholder="checked: bool"/>*/}
-            {/*<button onSubmit={submitForm}></button>*/}
-
-            <AddNewTodo />
         </main>
     );
 }
