@@ -1,4 +1,7 @@
-# Default Next.js README.MD - update to be more correct, mention todo 2.0 coming soon...
+# Default Next.js README
+### update to be more correct, mention todo 2.0 coming soon...
+
+# content:
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
